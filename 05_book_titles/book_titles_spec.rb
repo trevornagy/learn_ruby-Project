@@ -46,7 +46,8 @@ describe Book do
         specify 'an' do
           @book.title = "to eat an apple a day"
           expect(@book.title).to eq("To Eat an Apple a Day")
-        end
+        end little_words = ["the", "and", "an", "for", "if", "of", "a", "or", "over"]
+    text.split.each_with_index.map{|text, index| little_words.include?(text) && index > 0 ? text : text.capitalize }.join(" ")  
       end
 
       specify 'conjunctions' do
